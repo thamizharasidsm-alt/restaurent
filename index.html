@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>My Kitchen</title>
+</head>
+<header class="bg-white shadow-sm">
+
+  <!-- Top Bar -->
+  <div class="bg-gray-200 text-center py-2 text-sm">
+    Subscribe to our newsletter -
+    <span class="font-semibold">mykitchen@gmail.com</span>
+  </div>
+
+  <!-- Main Navbar -->
+  <div class="px-6 py-4">
+
+    <div class="flex items-center justify-between">
+
+      <!-- Logo -->
+      <div class="text-xl font-semibold border px-4 py-2 rounded-full border-gray-300">
+        <span class="text-red-500">My</span> Kitchen
+      </div>
+
+      <!-- Search (Desktop only) -->
+      <div class="hidden md:flex items-center gap-3">
+        <input type="text"
+          placeholder="Search"
+          class="border-b border-gray-400 focus:outline-none px-2 py-1">
+        <button class="bg-red-500 text-white p-2 rounded-full">
+          🔍
+        </button>
+      </div>
+
+      <!-- Hamburger -->
+      <button id="menu-btn" class="md:hidden text-2xl">
+        ☰
+      </button>
+
+    </div>
+
+    <!-- Menu -->
+    <ul id="menu"
+      class="hidden flex-col mt-4 gap-4 font-medium text-gray-700
+             md:flex md:flex-row md:justify-center md:gap-10 md:mt-6">
+
+      <li><a href="./index.html" class="hover:text-red-500">HOME</a></li>
+      <li><a href="./receipes.html" class="hover:text-red-500">RECIPES</a></li>
+      <li><a href="./blog.html" class="hover:text-red-500">BLOG</a></li>
+      <li><a href="./about us .html" class="hover:text-red-500">ABOUT ME</a></li>
+
+      <!-- Mobile Search -->
+      <div class="flex md:hidden items-center gap-3 mt-4">
+        <input type="text"
+          placeholder="Search"
+          class="border-b border-gray-400 focus:outline-none px-2 py-1 w-full">
+        <button class="bg-red-500 text-white p-2 rounded-full">
+          🔍
+        </button>
+      </div>
+
+    </ul>
+
+  </div>
+
+</header>
+
+<!-- Toggle Script -->
+<script>
+  const btn = document.getElementById('menu-btn');
+  const menu = document.getElementById('menu');
+
+  btn.addEventListener('click', () => {
+    menu.classList.toggle('hidden');
+  });
+</script>
+
+  <!-- Hero Section -->
+  <section 
+    class="relative mx-6 mt-6 rounded-lg overflow-hidden"
+    style="background-image: url('./restaurent/hero\ image.png'); background-size: cover; background-position: center;"
+  >
+    <div class="bg-white/70 backdrop-brightness-95 w-full h-full px-8 py-20 flex flex-col items-center text-center">
+      
+      <h1 class="text-4xl md:text-5xl font-bold text-red-500 mb-6">
+        Sharing my love for food
+      </h1>
+
+      <p class="max-w-2xl text-gray-800 text-lg leading-relaxed mb-8">
+        I'm excited to share my passion for all things culinary. 
+        Food is not just about nourishment: it's an experience that 
+        brings people together, evokes memories, and sparks creativity.
+      </p>
+
+      <button class="bg-red-500 hover:bg-red-600 text-white px-6 py-3 rounded-md flex items-center gap-2">
+        GET IN TOUCH
+        <span>➤</span>
+      </button>
+
+    </div>
+  </section>
+
+  <section class="bg-gray-100 py-12 px-6">
+  <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10">
+
+    <!-- Card 1 -->
+    <div>
+      <div class="overflow-hidden rounded">
+        <img 
+          src="./restaurent/bites.png" 
+          alt="Stuffed Mini Peppers"
+          class="w-full h-[500px] object-cover"
+        />
+      </div>
+      <p class="text-red-500 uppercase text-sm mt-4 tracking-wide">
+        Bites
+      </p>
+      <h2 class="text-2xl md:text-3xl mt-2 text-gray-900">
+        Stuffed Mini Peppers
+      </h2>
+    </div>
+
+        <div>
+      <div class="overflow-hidden rounded">
+        <img 
+          src="./restaurent/side dish.png" 
+          alt="Stuffed Mini Peppers"
+          class="w-full h-[500px] object-cover"
+        />
+      </div>
+      <p class="text-red-500 uppercase text-sm mt-4 tracking-wide">
+        Bites
+      </p>
+      <h2 class="text-2xl md:text-3xl mt-2 text-gray-900">
+      mashed potatoes with garlic and herbs
+      </h2>
+    </div>
+      
+  
+</section>
+
+<section class="bg-gray-100 py-16 px-6">
+  <div class="max-w-6xl mx-auto border-2 border-red-500 p-10 md:p-12 relative">
+
+    <!-- Background pattern (optional placeholder) -->
+    <div class="absolute inset-0 opacity-10 pointer-events-none bg-[url('/mnt/data/image.png')] bg-cover bg-center"></div>
+
+    <div class="relative grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
+
+      <!-- Left Content -->
+      <div>
+        <p class="text-red-500 text-lg mb-2">New recipes</p>
+        <h2 class="text-3xl md:text-4xl font-bold text-red-600 leading-tight">
+          Straight to your inbox
+        </h2>
+      </div>
+
+      <!-- Form -->
+      <div class="md:col-span-2 flex flex-col md:flex-row items-center gap-6">
+
+        <!-- Name Input -->
+        <div class="w-full">
+          <input 
+            type="text" 
+            placeholder="Sela Seraphina"
+            class="w-full bg-transparent border-b-2 border-red-400 focus:outline-none py-2 text-lg"
+          />
+        </div>
+
+        <!-- Email Input -->
+        <div class="w-full flex items-center border-b-2 border-red-400">
+          <input 
+            type="email" 
+            placeholder="selahseraphina@gmail.com"
+            class="w-full bg-transparent focus:outline-none py-2 text-lg"
+          />
+          <button class="text-red-500 text-xl ml-2">
+            ➤
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="bg-gray-100 py-16 px-6">
+  <div class="max-w-7xl mx-auto">
+
+    <!-- Header -->
+    <div class="flex items-center justify-between mb-10">
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-900">
+        Latest Recipes
+      </h2>
+
+      <!-- View All Button -->
+      <a href="recipes.html" 
+         class="bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-xl flex items-center gap-2 text-lg">
+        View All <span>→</span>
+      </a>
+    </div>
+
+    <!-- Cards -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+
+      <!-- Card 1 -->
+      <a href="recipe1.html" class="block bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition">
+        <img src="./restaurent/latest recipes 1.png" class="w-full h-64 object-cover" />
+        <div class="p-5 text-center">
+          <h3 class="text-lg font-medium text-gray-800">
+            Chickpea and <br /> sprouts salad
+          </h3>
+        </div>
+      </a>
+
+      <!-- Card 2 -->
+      <a href="recipe2.html" class="block bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition">
+        <img src="./restaurent/latest recipes 2.png" class="w-full h-64 object-cover" />
+        <div class="p-5 text-center">
+          <h3 class="text-lg font-medium text-gray-800">
+            High protein <br /> chocolate mousse
+          </h3>
+        </div>
+      </a>
+
+      <!-- Card 3 -->
+      <a href="recipe3.html" class="block bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition">
+        <img src="./restaurent/latest recipes 3.png" class="w-full h-64 object-cover" />
+        <div class="p-5 text-center">
+          <h3 class="text-lg font-medium text-gray-800">
+            Big mac lamb chops <br /> and veggies
+          </h3>
+        </div>
+      </a>
+
+      <!-- Card 4 -->
+      <a href="recipe4.html" class="block bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition">
+        <img src="./restaurent/latest recipes 4.png" class="w-full h-64 object-cover" />
+        <div class="p-5 text-center">
+          <h3 class="text-lg font-medium text-gray-800">
+            Healthy apple <br /> crumble
+          </h3>
+        </div>
+      </a>
+
+    </div>
+
+  </div>
+</section>
+
+<section class="bg-red-600 py-16 px-6">
+  <div class="max-w-6xl mx-auto border-2 border-white p-10 md:p-14">
+
+    <div class="grid grid-cols-1 md:grid-cols-2 items-center gap-10">
+
+      <!-- Left Content -->
+      <div class="text-white text-center md:text-left">
+        <h2 class="text-3xl md:text-5xl font-semibold mb-6 leading-snug">
+          Hello there! I am Tiffy.
+        </h2>
+
+        <p class="text-xl md:text-2xl mb-8">
+          Start cooking with me
+        </p>
+
+        <!-- Social Icons -->
+        <div class="flex justify-center md:justify-start gap-6 mb-8 text-2xl">
+          <span class="bg-white text-red-600 rounded-full w-10 h-10 flex items-center justify-center">f</span>
+          <span class="bg-white text-red-600 rounded-full w-10 h-10 flex items-center justify-center">◎</span>
+          <span class="bg-white text-red-600 rounded-full w-10 h-10 flex items-center justify-center">▶</span>
+        </div>
+
+        <!-- Button -->
+        <button class="text-white border border-white px-6 py-3 uppercase tracking-wide hover:bg-white hover:text-red-600 transition">
+          View More
+        </button>
+      </div>
+
+      <!-- Right Image -->
+      <div class="flex justify-center md:justify-end">
+        <img 
+          src="./restaurent/profile.png" 
+          alt="Chef"
+          class="w-64 h-64 md:w-80 md:h-80 object-cover rounded-full border-4 border-white"
+        />
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<section class="bg-gray-100 py-16 px-6">
+  <div class="max-w-7xl mx-auto">
+
+    <!-- Header -->
+    <div class="flex items-center justify-between mb-10">
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-900">
+        Readers Favourites
+      </h2>
+
+      <a href="./blog.html">
+  <button class="bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-xl flex items-center gap-2 text-lg">
+    View All <span>→</span>
+  </button>
+</a>
+    </div>
+
+    <!-- Cards -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+
+      <!-- Card 1 -->
+      <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+        <img src="./restaurent/readers fav 1.png" class="w-full h-64 object-cover" />
+        <div class="p-5 text-center">
+          <h3 class="text-lg font-medium text-gray-800">
+            Time saving meal <br /> prep
+          </h3>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+        <img src="./restaurent/readers fav 2.png" class="w-full h-64 object-cover" />
+        <div class="p-5 text-center">
+          <h3 class="text-lg font-medium text-gray-800">
+            Toddler -friendly <br /> foods
+          </h3>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+        <img src="./restaurent/readers fav 3.png" class="w-full h-64 object-cover" />
+        <div class="p-5 text-center">
+          <h3 class="text-lg font-medium text-gray-800">
+            10-must try vegan <br /> recipes
+          </h3>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+        <img src="./restaurent/readers fav 4.png" class="w-full h-64 object-cover" />
+        <div class="p-5 text-center">
+          <h3 class="text-lg font-medium text-gray-800">
+            Canning and <br /> preserving methods
+          </h3>
+        </div>
+      </div>
+
+    </div>
+
+
+
+
+  </div>
+</section>
+
+<section class="w-full bg-gray-100 py-16 px-4">
+  <div class="max-w-5xl mx-auto border-2 border-red-500 p-10 text-center relative">
+
+    <!-- Heading -->
+    <h2 class="text-3xl md:text-4xl font-semibold text-red-600 mb-4">
+      Our Newsletter
+    </h2>
+
+    <!-- Description -->
+    <p class="text-gray-800 text-lg md:text-xl mb-8 leading-relaxed">
+      Subscribe to our newsletter & keep up with our latest recipes
+      and organized workshops.
+    </p>
+
+    <!-- Input field -->
+    <div class="flex items-center justify-center max-w-xl mx-auto border-b border-gray-400">
+      <input
+        type="email"
+        placeholder="Enter your email address here"
+        class="w-full bg-transparent py-3 px-2 text-gray-700 placeholder-gray-500 focus:outline-none"
+      />
+
+      <!-- Send icon -->
+      <button class="p-2 text-black hover:text-red-600 transition">
+        <!-- Simple arrow icon -->
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 rotate-45" fill="currentColor" viewBox="0 0 20 20">
+          <path d="M2.94 2.94a1.5 1.5 0 012.12 0l11 11a1.5 1.5 0 01-2.12 2.12l-11-11a1.5 1.5 0 010-2.12z"/>
+        </svg>
+      </button>
+    </div>
+
+  </div>
+</section>
+
+<section class="w-full bg-gray-100 py-16 px-4">
+  <div class="max-w-7xl mx-auto text-center">
+
+    <!-- Heading -->
+    <h2 class="text-2xl md:text-3xl font-semibold text-gray-900 leading-relaxed mb-12">
+      Share Your Meals On With Instagram With 
+      <span class="text-red-600">#mykitchen</span><br class="hidden md:block"/>
+      & We Will Reward The Meal Of The Month!
+    </h2>
+
+    <!-- Image Grid -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+
+      <!-- Card 1 -->
+      <div class="overflow-hidden rounded-lg shadow-sm">
+        <img 
+          src="./restaurent/insta 1.png" 
+          alt="Pancakes"
+          class="w-full h-64 object-cover hover:scale-105 transition duration-300"
+        />
+      </div>
+
+      <!-- Card 2 -->
+      <div class="overflow-hidden rounded-lg shadow-sm">
+        <img 
+          src="./restaurent/insta 2.png" 
+          alt="Burger"
+          class="w-full h-64 object-cover hover:scale-105 transition duration-300"
+        />
+      </div>
+
+      <!-- Card 3 -->
+      <div class="overflow-hidden rounded-lg shadow-sm">
+        <img 
+          src="./restaurent/insta 3.png" 
+          alt="Chicken"
+          class="w-full h-64 object-cover hover:scale-105 transition duration-300"
+        />
+      </div>
+
+      <!-- Card 4 -->
+      <div class="overflow-hidden rounded-lg shadow-sm">
+        <img 
+          src="./restaurent/insta 4.png" 
+          alt="Cake"
+          class="w-full h-64 object-cover hover:scale-105 transition duration-300"
+        />
+      </div>
+
+      <!-- Card 5 -->
+      <div class="overflow-hidden rounded-lg shadow-sm">
+        <img 
+          src="./restaurent/insta 5.png" 
+          alt="Fries"
+          class="w-full h-64 object-cover hover:scale-105 transition duration-300"
+        />
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!--footer-->
+<div class="bg-gray-100 flex flex-col justify-center items-center text-center px-6">
+
+  <!-- Logo / Title -->
+  <div class="mb-6">
+    <div class="inline-block border border-gray-400 px-6 py-2 rounded-full relative">
+      <span class="text-red-600 font-medium">My Kitchen</span>
+    </div>
+  </div>
+
+  <!-- Subtitle -->
+  <h2 class="text-2xl md:text-3xl font-medium text-gray-800 mb-6">
+    Healthy recipes for busy people
+  </h2>
+
+  <!-- Social Icons -->
+ <img src="./restaurent/social media links.png" alt="social media icons" class="mb-6 w-48"/>
+
+  <!-- Email Input -->
+  <div class="w-full max-w-md mb-2">
+    <div class="flex items-center border-b border-gray-400">
+      <input type="email"
+             placeholder="Enter your email address here"
+             class="w-full bg-transparent outline-none py-2 text-gray-700 placeholder-gray-500">
+
+      <button class="text-black text-xl px-2">
+        ➤
+      </button>
+    </div>
+  </div>
+
+  <!-- Note -->
+  <p class="text-sm text-gray-600 mb-12">
+    *Be informed about the latest recipes and workshops
+  </p>
+
+  <!-- Footer -->
+  <div class="w-full flex justify-between text-gray-800 text-lg px-6">
+    <p>Privacy Policy</p>
+    <p>copyrights 2022 © my kitchen</p>
+  </div>
+
+</div>
+
+</body>
+</html>

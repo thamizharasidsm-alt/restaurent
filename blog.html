@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>My Kitchen</title>
+</head>
+<header class="bg-white shadow-sm">
+
+  <!-- Top Bar -->
+  <div class="bg-gray-200 text-center py-2 text-sm">
+    Subscribe to our newsletter -
+    <span class="font-semibold">mykitchen@gmail.com</span>
+  </div>
+
+  <!-- Main Navbar -->
+  <div class="px-6 py-4">
+
+    <div class="flex items-center justify-between">
+
+      <!-- Logo -->
+      <div class="text-xl font-semibold border px-4 py-2 rounded-full border-gray-300">
+        <span class="text-red-500">My</span> Kitchen
+      </div>
+
+      <!-- Search (Desktop only) -->
+      <div class="hidden md:flex items-center gap-3">
+        <input type="text"
+          placeholder="Search"
+          class="border-b border-gray-400 focus:outline-none px-2 py-1">
+        <button class="bg-red-500 text-white p-2 rounded-full">
+          🔍
+        </button>
+      </div>
+
+      <!-- Hamburger -->
+      <button id="menu-btn" class="md:hidden text-2xl">
+        ☰
+      </button>
+
+    </div>
+
+    <!-- Menu -->
+    <ul id="menu"
+      class="hidden flex-col mt-4 gap-4 font-medium text-gray-700
+             md:flex md:flex-row md:justify-center md:gap-10 md:mt-6">
+
+      <li><a href="./index.html" class="hover:text-red-500">HOME</a></li>
+      <li><a href="./receipes.html" class="hover:text-red-500">RECIPES</a></li>
+      <li><a href="./blog.html" class="hover:text-red-500">BLOG</a></li>
+      <li><a href="./about us .html" class="hover:text-red-500">ABOUT ME</a></li>
+
+      <!-- Mobile Search -->
+      <div class="flex md:hidden items-center gap-3 mt-4">
+        <input type="text"
+          placeholder="Search"
+          class="border-b border-gray-400 focus:outline-none px-2 py-1 w-full">
+        <button class="bg-red-500 text-white p-2 rounded-full">
+          🔍
+        </button>
+      </div>
+
+    </ul>
+
+  </div>
+
+</header>
+
+<!-- Toggle Script -->
+<script>
+  const btn = document.getElementById('menu-btn');
+  const menu = document.getElementById('menu');
+
+  btn.addEventListener('click', () => {
+    menu.classList.toggle('hidden');
+  });
+</script>
+
+  <div class="meal -leading:loose   font-bold " >
+    <h2>The ultimate guide to meal prep</h2>
+    <p>To meal prep effectively, start by planning your meals for the week, then create a grocery list based on those plans. Prep ingredients in advance and consider choosing recipes with overlapping ingredients for efficiency. Portion your meals accurately and store them in suitable containers.</p>
+  </div>
+<div class="rolling bg-image-600">
+    <img src="./restaurent/blog header image.png" alt="roll" class="mx-auto">
+
+</div>
+
+<div class="plan font-bold">
+    <h2>1.Plan Your Meal</h2>
+    <ol>
+        <li>Determine which meals you want to prep, focusing on meals you typically eat out or skip.</li>
+        <li>Consider a meal rotation to avoid food boredom and keep things interesting.</li>
+        <li>Start small by prepping for a few days initially, gradually increasing the number of days as you become more comfortable</li></li>
+    </ol>
+
+ <h2>2. Create a Grocery List:</h2>
+    <ol>
+        <li>
+            List all ingredients needed for your planned meals, organized by store sections for efficiency.
+        </li>
+         <li>Check your pantry and freezer for existing items before shopping to minimize waste and save money</li>
+         <li>Consider buying a mix of fresh, frozen, and shelf-stable items.</li>
+    </ol> 
+</div>
+
+
+
+
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 p-2">
+  
+  <img src="./restaurent/blog page 1.png" class="w-full h-64 object-cover rounded-lg" />
+  
+  <img src="./restaurent/blog page 2.png" class="w-full h-64 object-cover rounded-lg" />
+  
+  <img src="./restaurent/blog page 3.png" class="w-full h-64 object-cover rounded-lg" />
+  
+  <img src="./restaurent/blog page 4.png" class="w-full h-64 object-cover rounded-lg" />
+
+</div>
+
+<!--footer-->
+<div class="bg-gray-100 py-16 px-6 text-center relative">
+
+  <!-- Top Title -->
+  <div class="mb-6">
+    <div class="inline-block border border-gray-400 px-8 py-3 rounded-full relative">
+      <span class="text-red-500 font-medium text-lg">My Kitchen</span>
+    </div>
+  </div>
+
+  <!-- Subtitle -->
+  <h2 class="text-2xl md:text-3xl font-semibold text-gray-800 mb-6">
+    Healthy recipes for busy people
+  </h2>
+
+  <!-- Social Icons -->
+  <div class="flex justify-center gap-6 text-red-500 text-xl mb-8">
+    <i class="fab fa-twitter"></i>
+    <i class="fab fa-facebook"></i>
+    <i class="fab fa-instagram"></i>
+    <i class="fab fa-youtube"></i>
+    <i class="fab fa-linkedin"></i>
+    <i class="fab fa-tiktok"></i>
+  </div>
+
+  <!-- Email Input -->
+  <div class="max-w-md mx-auto mb-3 relative">
+    <input 
+      type="email" 
+      placeholder="Enter your email address here"
+      class="w-full bg-transparent border-b border-gray-500 focus:outline-none py-2 pr-10 text-gray-700"
+    />
+    <button class="absolute right-0 top-1/2 -translate-y-1/2 text-gray-700">
+      ➤
+    </button>
+  </div>
+
+  <!-- Small Text -->
+  <p class="text-sm text-gray-600 mb-12">
+    *Be informed about the latest recipes and workshops
+  </p>
+
+  <!-- Bottom Row -->
+  <div class="flex flex-col md:flex-row justify-between items-center text-gray-800 text-lg">
+    <p class="mb-4 md:mb-0">Privacy Policy</p>
+    <p>copyrights 2022 © my kitchen</p>
+  </div>
+
+</div>
+
+

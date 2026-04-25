@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>My Kitchen</title>
+</head>
+<header class="bg-white shadow-sm">
+
+  <!-- Top Bar -->
+  <div class="bg-gray-200 text-center py-2 text-sm">
+    Subscribe to our newsletter -
+    <span class="font-semibold">mykitchen@gmail.com</span>
+  </div>
+
+  <!-- Main Navbar -->
+  <div class="px-6 py-4">
+
+    <div class="flex items-center justify-between">
+
+      <!-- Logo -->
+      <div class="text-xl font-semibold border px-4 py-2 rounded-full border-gray-300">
+        <span class="text-red-500">My</span> Kitchen
+      </div>
+
+      <!-- Search (Desktop only) -->
+      <div class="hidden md:flex items-center gap-3">
+        <input type="text"
+          placeholder="Search"
+          class="border-b border-gray-400 focus:outline-none px-2 py-1">
+        <button class="bg-red-500 text-white p-2 rounded-full">
+          🔍
+        </button>
+      </div>
+
+      <!-- Hamburger -->
+      <button id="menu-btn" class="md:hidden text-2xl">
+        ☰
+      </button>
+
+    </div>
+
+    <!-- Menu -->
+    <ul id="menu"
+      class="hidden flex-col mt-4 gap-4 font-medium text-gray-700
+             md:flex md:flex-row md:justify-center md:gap-10 md:mt-6">
+
+      <li><a href="index.html" class="hover:text-red-500">HOME</a></li>
+      <li><a href="recipes.html" class="hover:text-red-500">RECIPES</a></li>
+      <li><a href="blog.html" class="hover:text-red-500">BLOG</a></li>
+      <li><a href="about.html" class="hover:text-red-500">ABOUT ME</a></li>
+
+      <!-- Mobile Search -->
+      <div class="flex md:hidden items-center gap-3 mt-4">
+        <input type="text"
+          placeholder="Search"
+          class="border-b border-gray-400 focus:outline-none px-2 py-1 w-full">
+        <button class="bg-red-500 text-white p-2 rounded-full">
+          🔍
+        </button>
+      </div>
+
+    </ul>
+
+  </div>
+
+</header>
+
+<!-- Toggle Script -->
+<script>
+  const btn = document.getElementById('menu-btn');
+  const menu = document.getElementById('menu');
+
+  btn.addEventListener('click', () => {
+    menu.classList.toggle('hidden');
+  });
+</script>
+
+<body class="bg-gray-100">
+
+  <div class="max-w-7xl mx-auto px-6 py-10">
+
+    <!-- Title -->
+    <h1 class="text-4xl font-bold mb-6">
+      Mutton One Pot Flavored Rice
+    </h1>
+
+    <!-- Author + Social -->
+    <div class="flex items-center gap-6 mb-8">
+      
+      <!-- Author -->
+      <div class="flex items-center gap-4">
+        <img src="./restaurent/profile.png" class="w-14 h-14 rounded-full object-cover">
+        <div>
+          <p class="text-xl font-medium">Tiffy</p>
+          <p class="text-gray-500">February 27, 2025</p>
+        </div>
+      </div>
+
+      <!-- Divider -->
+      <div class="h-10 w-px bg-gray-300"></div>
+
+      <!-- Social Icons -->
+      <img src="./restaurent/social media links.png" class="w-6 h-6 object-cover cursor-pointer">
+
+    </div>
+
+    <!-- Main Layout -->
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
+
+      <!-- Left: Main Image -->
+      <div class="lg:col-span-2">
+        <img src="./restaurent/recipe index 9.png" 
+             class="w-full h-[600px] object-cover rounded-lg shadow">
+      </div>
+
+      <!-- Right: Sidebar -->
+      <div>
+        <h2 class="text-2xl font-bold mb-6">Latest Recipes</h2>
+
+        <div class="space-y-6">
+
+          <!-- Item -->
+          <div class="flex gap-4 items-center">
+            <img src="./restaurent/latest recipe in des 1.png" class="w-20 h-20 object-cover rounded">
+            <div>
+              <p class="font-medium">Chickpea Salad</p>
+              <p class="text-gray-500 text-sm">April 25, 2025</p>
+            </div>
+          </div>
+
+          <div class="flex gap-4 items-center">
+            <img src="./restaurent/latest recipe in des2.png" class="w-20 h-20 object-cover rounded">
+            <div>
+              <p class="font-medium">Crispy Corn</p>
+              <p class="text-gray-500 text-sm">May 7, 2025</p>
+            </div>
+          </div>
+
+          <div class="flex gap-4 items-center">
+            <img src="./restaurent/latest recipe in des 3.png" class="w-20 h-20 object-cover rounded">
+            <div>
+              <p class="font-medium">Barley Soup</p>
+              <p class="text-gray-500 text-sm">May 25, 2025</p>
+            </div>
+          </div>
+
+          <div class="flex gap-4 items-center">
+            <img src="./restaurent/latest recipe in des 4.png" class="w-20 h-20 object-cover rounded">
+            <div>
+              <p class="font-medium">Mutton Rogan Josh</p>
+              <p class="text-gray-500 text-sm">April 14, 2025</p>
+            </div>
+          </div>
+
+          <div class="flex gap-4 items-center">
+            <img src="./restaurent/latest recipe in des 5.png" class="w-20 h-20 object-cover rounded">
+            <div>
+              <p class="font-medium">Hassel nut Cookies</p>
+              <p class="text-gray-500 text-sm">May 25, 2025</p>
+            </div></div>
+            <div class="flex gap-4 items-center">
+            <img src="./restaurent/latest recipe in des 6.png" class="w-20 h-20 object-cover rounded">
+            <div>
+              <p class="font-medium">Hassel nut Cookies</p>
+              <p class="text-gray-500 text-sm">May 25, 2025</p>
+            </div>
+          </div>
+
+      
+      </div>
+
+    </div>
+
+  </div>
+
+<div class="max-w-7xl mx-auto px-6 py-10 grid grid-cols-1 lg:grid-cols-3 gap-10">
+
+  <!-- LEFT CONTENT -->
+  <div class="lg:col-span-2">
+
+    <!-- Top Info -->
+    <div class="flex items-center gap-6 text-gray-600 mb-6 text-sm">
+      <span>⏱ 30 Minutes</span>
+      <span>👨‍🍳 Super Easy</span>
+      <span>🍴 4 persons</span>
+      <span>🍽 Mani Dish</span>
+    </div>
+
+    <!-- Description -->
+    <p class="text-lg text-gray-700 leading-relaxed mb-6">
+      This hearty and easy stuffed shells with ground beef recipe is the perfect one
+      pan meal that the whole family will love! Plus, it can be made ahead and frozen,
+      so you have a delicious, make ahead meal ready for those busy nights when you
+      don’t have time to cook.
+    </p>
+
+    <hr class="mb-6">
+
+    <!-- Ingredients -->
+    <h2 class="text-2xl font-semibold underline mb-4">Ingredients:</h2>
+
+    <ul class="space-y-4 text-lg">
+      <li class="flex items-center gap-3"><input type="checkbox"> 2 - pieces chicken thighs</li>
+      <li class="flex items-center gap-3"><input type="checkbox"> 200g ground meat</li>
+      <li class="flex items-center gap-3"><input type="checkbox"> 5 whole eggs</li>
+      <li class="flex items-center gap-3"><input type="checkbox"> 2 cups boiled potatoes peeled</li>
+      <li class="flex items-center gap-3"><input type="checkbox"> 1/2 cup walnuts</li>
+    </ul>
+
+    <!-- Dressing -->
+    <h2 class="text-2xl font-semibold underline mt-8 mb-4">For Dressing:</h2>
+
+    <ul class="space-y-4 text-lg">
+      <li class="flex items-center gap-3"><input type="checkbox"> 2 cups blueberries, washed and picked over for stems</li>
+      <li class="flex items-center gap-3"><input type="checkbox"> Fresh herbs, such as chopped parsley and/or cilantro</li>
+      <li class="flex items-center gap-3"><input type="checkbox"> 1 tablespoon honey (light brown sugar or maple syrup also works)</li>
+      <li class="flex items-center gap-3"><input type="checkbox"> 300g Mayonnaise</li>
+    </ul>
+
+  </div>
+
+  <!-- RIGHT SIDEBAR -->
+  <div class="space-y-10">
+
+    <!-- Logo -->
+    <div class="text-center">
+      <div class="inline-block border-2 border-gray-400 rounded-full px-6 py-2 text-red-500 font-semibold">
+        My Kitchen
+      </div>
+    </div>
+
+    <!-- Tagline -->
+    <h3 class="text-xl font-semibold text-center">
+      Healthy recipes for busy people
+    </h3>
+
+    <!-- Social Icons -->
+    <div class="flex justify-center gap-5 text-red-500 text-xl">
+     <img src="./restaurent/social media links.png" alt="Instagram">
+    </div>
+
+    <!-- Email -->
+    <div>
+      <input type="email" placeholder="Enter your email address here"
+        class="w-full border-b border-gray-400 bg-transparent outline-none py-2">
+      <p class="text-sm text-gray-500 mt-2">
+        *Be informed about the latest recipes and workshops
+      </p>
+    </div>
+
+    <!-- Instagram Section -->
+    <div>
+      <h3 class="text-lg font-semibold text-center mb-4">
+        Share your meals with us on Instagram
+      </h3>
+
+      <div class="grid grid-cols-3 gap-3">
+        <img src="./restaurent/share image insta in des 1.png" class="w-full h-24 object-cover">
+        <img src="./restaurent/share image insta in des 2.png" class="w-full h-24 object-cover">
+        <img src="./restaurent/share image insta in des 3.png" class="w-full h-24 object-cover">
+        <img src="./restaurent/share image insta in des 4.png" class="w-full h-24 object-cover">
+        <img src="./restaurent/share image insta in des 5.png" class="w-full h-24 object-cover">
+        <img src="./restaurent/share image insta in des 6.png" class="w-full h-24 object-cover">
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+
+<div class="max-w-5xl mx-auto px-6 py-10">
+
+  <!-- Nutrition Info -->
+  <div class="bg-gray-200 p-6 flex flex-col md:flex-row items-center justify-between mb-10">
+
+    <div class="text-xl font-semibold mb-4 md:mb-0">
+      Nutrition Information
+    </div>
+
+    <div class="hidden md:block w-px h-12 bg-gray-400 mx-6"></div>
+
+    <div class="grid grid-cols-5 gap-8 text-center text-gray-700">
+      <div>
+        <p class="font-semibold text-lg">200g</p>
+        <p class="text-sm">Fat</p>
+      </div>
+      <div>
+        <p class="font-semibold text-lg">100g</p>
+        <p class="text-sm">Protein</p>
+      </div>
+      <div>
+        <p class="font-semibold text-lg">146g</p>
+        <p class="text-sm">Sugar</p>
+      </div>
+      <div>
+        <p class="font-semibold text-lg">436g</p>
+        <p class="text-sm">Calories</p>
+      </div>
+      <div>
+        <p class="font-semibold text-lg">24g</p>
+        <p class="text-sm">Carbs</p>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Directions Title -->
+  <div class="flex items-center gap-4 mb-8">
+    <h2 class="text-3xl font-bold underline">Directions:</h2>
+    <div class="flex-1 h-px bg-gray-300"></div>
+  </div>
+
+  <!-- Step 1 -->
+  <div class="flex gap-6">
+
+    <!-- Step Number -->
+    <div class="w-12 h-12 flex items-center justify-center rounded-full bg-red-600 text-white text-lg font-bold">
+      1
+    </div>
+
+    <!-- Content -->
+    <div class="flex-1">
+
+      <h3 class="text-xl font-semibold mb-3">
+        Make the barbecue sauce:
+      </h3>
+
+      <p class="text-gray-700 leading-relaxed mb-6">
+        In a medium saucepan, mix the tomato ketchup, brown sugar, apple cider vinegar, 
+        soy sauce, and Worcestershire sauce. Stir until the brown sugar is fully dissolved 
+        and the mixture is smooth. Sprinkle in the smoked paprika, garlic powder, onion powder, 
+        black pepper, and cayenne pepper (if using). Mix well to combine all the spices evenly 
+        into the sauce. Place the saucepan over medium heat and bring the sauce to a gentle simmer.
+      </p>
+
+      <!-- Images -->
+      <div class="flex gap-6 mb-6">
+        <img src="./restaurent/recipe des directn 1.png" class="w-48 h-48 object-cover rounded">
+        <img src="./restaurent/recipe des directn 2.png" class="w-48 h-48 object-cover rounded">
+      </div>
+
+      <p class="text-gray-700 leading-relaxed">
+        Once you’re satisfied with the flavour, remove the sauce from heat and let it cool. 
+        Transfer the barbecue sauce into a glass jar or an airtight container. It can be 
+        refrigerated for up to two weeks, making it convenient for use in your cooking.
+      </p>
+
+    </div>
+
+  </div>
+
+</div>
+
+
+<div class="max-w-5xl mx-auto px-6 py-10 space-y-12">
+
+  <!-- STEP 2 -->
+  <div class="flex gap-6">
+
+    <!-- Number -->
+    <div class="w-12 h-12 flex items-center justify-center rounded-full bg-red-600 text-white text-lg font-bold">
+      2
+    </div>
+
+    <!-- Content -->
+    <div>
+      <h3 class="text-xl font-semibold mb-3">
+        Cook the chicken (or substitute 2 cups if shredded cooking chicken):
+      </h3>
+
+      <p class="text-gray-700 leading-relaxed">
+        In a medium saucepan, mix the tomato ketchup, brown sugar, apple cider vinegar, 
+        soy sauce, and Worcestershire sauce. Stir until the brown sugar is fully dissolved 
+        and the mixture is smooth.
+      </p>
+    </div>
+
+  </div>
+
+  <!-- STEP 3 -->
+  <div class="flex gap-6">
+
+    <!-- Number -->
+    <div class="w-12 h-12 flex items-center justify-center rounded-full bg-red-600 text-white text-lg font-bold">
+      3
+    </div>
+
+    <!-- Content -->
+    <div>
+
+      <h3 class="text-xl font-semibold mb-3">
+        Mix the chicken with the barbecue sauce:
+      </h3>
+
+      <p class="text-gray-700 leading-relaxed mb-6">
+        In a medium saucepan, mix the tomato ketchup, brown sugar, apple cider vinegar, 
+        soy sauce, and Worcestershire sauce. Stir until the brown sugar is fully dissolved 
+        and the mixture is smooth.
+      </p>
+
+      <!-- Images -->
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-6">
+        <img src="./restaurent/recipe des directn 3.png" class="w-full h-56 object-cover rounded">
+        <img src="./restaurent/recipe des directn 4.png" class="w-full h-56 object-cover rounded">
+        <img src="./restaurent/recipe des directn 5.png" class="w-full h-56 object-cover rounded">
+      </div>
+
+      <p class="text-gray-700 leading-relaxed">
+        Once you’re satisfied with the flavour, remove the sauce from heat and let it cool. 
+        Transfer the barbecue sauce into a glass jar or an airtight container. It can be 
+        refrigerated for up to two weeks, making it convenient for use in your cooking.
+      </p>
+
+    </div>
+
+  </div>
+
+</div>
+
+<div class="max-w-7xl mx-auto px-6 py-12">
+
+  <!-- Heading -->
+  <div class="flex items-center gap-4 mb-10">
+    <h2 class="text-3xl font-bold underline">Try this also</h2>
+    <div class="flex-1 h-px bg-gray-300"></div>
+  </div>
+
+  <!-- Cards -->
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+
+    <!-- Card 1 -->
+    <a href="chicken.html" 
+       class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition duration-300">
+      <img src="./restaurent/readers fav 1.png" class="w-full h-64 object-cover">
+      <div class="bg-gray-200 text-center p-5">
+        <p class="text-lg font-medium">Time saving meal prep</p>
+      </div>
+    </a>
+
+    <!-- Card 2 -->
+    <a href="#" 
+       class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition duration-300">
+      <img src="./restaurent/readers fav 2.png" class="w-full h-64 object-cover">
+      <div class="bg-gray-200 text-center p-5">
+        <p class="text-lg font-medium">Toddler-friendly foods</p>
+      </div>
+    </a>
+
+    <!-- Card 3 -->
+    <a href="mutton.html" 
+       class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition duration-300">
+      <img src="./restaurent/readers fav 3.png" class="w-full h-64 object-cover">
+      <div class="bg-gray-200 text-center p-5">
+        <p class="text-lg font-medium">10-must try vegan recipes</p>
+      </div>
+    </a>
+
+    <!-- Card 4 -->
+    <a href="chicken.html" 
+       class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition duration-300">
+      <img src="./restaurent/readers fav 4.png" class="w-full h-64 object-cover">
+      <div class="bg-gray-200 text-center p-5">
+        <p class="text-lg font-medium">Canning and preserving methods</p>
+      </div>
+    </a>
+
+  </div>
+
+</div>
+<!--footer-->
+<div class="bg-gray-100 flex flex-col justify-center items-center text-center px-6">
+
+  <!-- Logo / Title -->
+  <div class="mb-6">
+    <div class="inline-block border border-gray-400 px-6 py-2 rounded-full relative">
+      <span class="text-red-600 font-medium">My Kitchen</span>
+    </div>
+  </div>
+
+  <!-- Subtitle -->
+  <h2 class="text-2xl md:text-3xl font-medium text-gray-800 mb-6">
+    Healthy recipes for busy people
+  </h2>
+
+  <!-- Social Icons -->
+  <div class="flex gap-6 text-red-600 text-xl mb-8">
+   <img src="./restaurent/social media links.png" alt="social media ">
+  </div>
+
+  <!-- Email Input -->
+  <div class="w-full max-w-md mb-2">
+    <div class="flex items-center border-b border-gray-400">
+      <input type="email"
+             placeholder="Enter your email address here"
+             class="w-full bg-transparent outline-none py-2 text-gray-700 placeholder-gray-500">
+
+      <button class="text-black text-xl px-2">
+        ➤
+      </button>
+    </div>
+  </div>
+
+  <!-- Note -->
+  <p class="text-sm text-gray-600 mb-12">
+    *Be informed about the latest recipes and workshops
+  </p>
+
+  <!-- Footer -->
+  <div class="w-full flex justify-between text-gray-800 text-lg px-6">
+    <p>Privacy Policy</p>
+    <p>copyrights 2022 © my kitchen</p>
+  </div>
+
+</div>
+
+</body>
+</html>

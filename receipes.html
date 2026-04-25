@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>My Kitchen</title>
+</head>
+<header class="bg-white shadow-sm">
+
+  <!-- Top Bar -->
+  <div class="bg-gray-200 text-center py-2 text-sm">
+    Subscribe to our newsletter -
+    <span class="font-semibold">mykitchen@gmail.com</span>
+  </div>
+
+  <!-- Main Navbar -->
+  <div class="px-6 py-4">
+
+    <div class="flex items-center justify-between">
+
+      <!-- Logo -->
+      <div class="text-xl font-semibold border px-4 py-2 rounded-full border-gray-300">
+        <span class="text-red-500">My</span> Kitchen
+      </div>
+
+      <!-- Search (Desktop only) -->
+      <div class="hidden md:flex items-center gap-3">
+        <input type="text"
+          placeholder="Search"
+          class="border-b border-gray-400 focus:outline-none px-2 py-1">
+        <button class="bg-red-500 text-white p-2 rounded-full">
+          🔍
+        </button>
+      </div>
+
+      <!-- Hamburger -->
+      <button id="menu-btn" class="md:hidden text-2xl">
+        ☰
+      </button>
+
+    </div>
+
+    <!-- Menu -->
+    <ul id="menu"
+      class="hidden flex-col mt-4 gap-4 font-medium text-gray-700
+             md:flex md:flex-row md:justify-center md:gap-10 md:mt-6">
+
+      <li><a href="./index.html" class="hover:text-red-500">HOME</a></li>
+      <li><a href="#" class="hover:text-red-500">RECIPES</a></li>
+      <li><a href="./blog.html" class="hover:text-red-500">BLOG</a></li>
+      <li><a href="./about-us.html" class="hover:text-red-500">ABOUT ME</a></li>
+
+      <!-- Mobile Search -->
+      <div class="flex md:hidden items-center gap-3 mt-4">
+        <input type="text"
+          placeholder="Search"
+          class="border-b border-gray-400 focus:outline-none px-2 py-1 w-full">
+        <button class="bg-red-500 text-white p-2 rounded-full">
+          🔍
+        </button>
+      </div>
+
+    </ul>
+
+  </div>
+
+</header>
+
+<!-- Toggle Script -->
+<script>
+  const btn = document.getElementById('menu-btn');
+  const menu = document.getElementById('menu');
+
+  btn.addEventListener('click', () => {
+    menu.classList.toggle('hidden');
+  });
+</script>
+<section class="w-full bg-gray-100 py-16 px-4">
+  <div class="max-w-7xl mx-auto text-center">
+
+    <!-- Title -->
+    <h2 class="text-3xl md:text-4xl font-semibold text-gray-900 mb-12">
+      Recipe Index
+    </h2>
+
+    <!-- Categories -->
+    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-10">
+
+      <!-- Item -->
+      <div class="flex flex-col items-center space-y-4">
+        <div class="w-36 h-36 rounded-full bg-gray-200 flex items-center justify-center">
+          <!-- Icon (Cupcake) -->
+          <span class="text-red-600 text-5xl"><img src="./restaurent/vegan icon.png" alt="Cupcake" class="w-full h-full object-cover"></span>
+        </div>
+        <p class="text-lg font-semibold text-gray-900 text-center">
+          Healthy<br/>Baking
+        </p>
+      </div>
+
+      <!-- Item -->
+      <div class="flex flex-col items-center space-y-4">
+        <div class="w-36 h-36 rounded-full bg-gray-200 flex items-center justify-center">
+          <span class="text-red-600 text-5xl"><img src="./restaurent/no bake icon.png" alt="No-bake Dessert" class="w-full h-full object-cover"></span>
+        </div>
+        <p class="text-lg font-semibold text-gray-900 text-center">
+          No-bake<br/>Dessert
+        </p>
+      </div>
+
+      <!-- Item -->
+      <div class="flex flex-col items-center space-y-4">
+        <div class="w-36 h-36 rounded-full bg-gray-200 flex items-center justify-center">
+          <span class="text-red-600 text-5xl"><img src="./restaurent/protein icon.png" alt="Protein Packed" class="w-full h-full object-cover"></span>
+        </div>
+        <p class="text-lg font-semibold text-gray-900 text-center">
+          Protein<br/>Packed
+        </p>
+      </div>
+
+      <!-- Item -->
+      <div class="flex flex-col items-center space-y-4">
+        <div class="w-36 h-36 rounded-full bg-gray-200 flex items-center justify-center">
+          <span class="text-red-600 text-5xl"><img src="./restaurent/5 minute icon.png" alt="5-Minute Recipe" class="w-full h-full object-cover"></span>
+        </div>
+        <p class="text-lg font-semibold text-gray-900 text-center">
+          5-Minute<br/>Recipe
+        </p>
+      </div>
+
+      <!-- Item -->
+      <div class="flex flex-col items-center space-y-4">
+        <div class="w-36 h-36 rounded-full bg-gray-200 flex items-center justify-center">
+          <span class="text-red-600 text-5xl"><img src="./restaurent/_ 5 icon.png" alt="Less than 5 Ingredients" class="w-full h-full object-cover"></span>
+        </div>
+        <p class="text-lg font-semibold text-gray-900 text-center">
+          &lt;5-Ingredients
+        </p>
+      </div>
+
+      <!-- Item -->
+      <div class="flex flex-col items-center space-y-4">
+        <div class="w-36 h-36 rounded-full bg-gray-200 flex items-center justify-center">
+          <span class="text-red-600 text-5xl"><img src="./restaurent/vegan icon.png" alt="Cupcake" class="w-full h-full object-cover"></span>
+        </div>
+        <p class="text-lg font-semibold text-gray-900 text-center">
+          Vegan<br/>Special
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="bg-gray-100 py-12 px-4">
+  <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-4 gap-10">
+
+    <!-- Sidebar -->
+    <aside class="lg:col-span-1 space-y-10">
+
+      <!-- Filter by Lifestyle -->
+      <div>
+        <h3 class="text-2xl font-semibold mb-6">Filter by Lifestyle</h3>
+        <div class="space-y-4">
+          <label class="flex items-center gap-3">
+            <input type="checkbox" class="w-5 h-5 accent-red-500">
+            Vegan (15)
+          </label>
+          <label class="flex items-center gap-3">
+            <input type="checkbox" class="w-5 h-5 accent-red-500">
+            Dairy-free (20)
+          </label>
+          <label class="flex items-center gap-3">
+            <input type="checkbox" class="w-5 h-5 accent-red-500">
+            Gluten-free (14)
+          </label>
+          <label class="flex items-center gap-3">
+            <input type="checkbox" class="w-5 h-5 accent-red-500">
+            Nut-free (12)
+          </label>
+          <label class="flex items-center gap-3">
+            <input type="checkbox" class="w-5 h-5 accent-red-500">
+            Refined Sugar-free (27)
+          </label>
+          <label class="flex items-center gap-3">
+            <input type="checkbox" class="w-5 h-5 accent-red-500">
+            Egg-free (13)
+          </label>
+        </div>
+      </div>
+
+      <!-- Filter by Meal Time -->
+      <div>
+        <h3 class="text-2xl font-semibold mb-6">Filter by Meal Time</h3>
+        <div class="space-y-4">
+          <label class="flex items-center gap-3">
+            <input type="checkbox" class="w-5 h-5 accent-red-500">
+            Breakfast (15)
+          </label>
+          <label class="flex items-center gap-3">
+            <input type="checkbox" class="w-5 h-5 accent-red-500">
+            Meal Prep (20)
+          </label>
+          <label class="flex items-center gap-3">
+            <input type="checkbox" class="w-5 h-5 accent-red-500">
+            Quick dinners (14)
+          </label>
+          <label class="flex items-center gap-3">
+            <input type="checkbox" class="w-5 h-5 accent-red-500">
+            Smoothies & juices (12)
+          </label>
+          <label class="flex items-center gap-3">
+            <input type="checkbox" class="w-5 h-5 accent-red-500">
+            Healthy snacks (27)
+          </label>
+          <label class="flex items-center gap-3">
+            <input type="checkbox" class="w-5 h-5 accent-red-500">
+            Baking recipes (13)
+          </label>
+        </div>
+      </div>
+
+    </aside>
+
+    <!-- Cards Grid -->
+    <div class="lg:col-span-3 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+
+      <!-- Card -->
+      <a href="./chicken.html"
+         class="block bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition group">
+        <img src="./restaurent/latest recipes 2.png"
+             class="w-full h-64 object-cover group-hover:scale-105 transition duration-300"/>
+        <div class="p-5 text-center font-medium text-lg">
+          High protein chocolate mousse
+        </div>
+      </a>
+
+      <!-- Card -->
+      <a href="./chicken.html"
+         class="block bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition group">
+        <img src="./restaurent/latest recipes 3.png"
+             class="w-full h-64 object-cover group-hover:scale-105 transition duration-300"/>
+        <div class="p-5 text-center font-medium text-lg">
+          Big mac lamb chops and veggies
+        </div>
+      </a>
+
+      <!-- Card -->
+      <a href="./chicken.html"
+         class="block bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition group">
+        <img src="./restaurent/recipe index 4.png"
+             class="w-full h-64 object-cover group-hover:scale-105 transition duration-300"/>
+        <div class="p-5 text-center font-medium text-lg">
+          Healthy apple crumble
+        </div>
+      </a>
+
+      <!-- Card -->
+      <a href="./chicken.html"
+         class="block bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition group">
+        <img src="./restaurent/recipe index 5.png"
+             class="w-full h-64 object-cover group-hover:scale-105 transition duration-300"/>
+        <div class="p-5 text-center font-medium text-lg">
+          One pot lasagna
+        </div>
+      </a>
+
+      <!-- Card -->
+      <a href="./chicken.html"
+         class="block bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition group">
+        <img src="./restaurent/recipe index 6.png"
+             class="w-full h-64 object-cover group-hover:scale-105 transition duration-300"/>
+        <div class="p-5 text-center font-medium text-lg">
+          Shrimp and chicken fried rice
+        </div>
+      </a>
+
+      <!-- Card -->
+      <a href="./chicken.html"
+         class="block bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition group">
+        <img src="./restaurent/recipe index 7.png"
+             class="w-full h-64 object-cover group-hover:scale-105 transition duration-300"/>
+        <div class="p-5 text-center font-medium text-lg">
+          Fudgy cherry brownies
+        </div>
+      </a>
+
+
+        <!-- Card -->
+      <a href="./chicken.html"
+         class="block bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition group">
+        <img src="./restaurent/recipe index 8.png"
+             class="w-full h-64 object-cover group-hover:scale-105 transition duration-300"/>
+        <div class="p-5 text-center font-medium text-lg">
+          sussy burritos
+        </div>
+      </a>
+
+      <!-- Card -->
+      <a href="./chicken.html"
+         class="block bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition group">
+        <img src="./restaurent/recipe index 9.png"
+             class="w-full h-64 object-cover group-hover:scale-105 transition duration-300"/>
+        <div class="p-5 text-center font-medium text-lg">
+          chick peas and chicken salad
+        </div>
+      </a>
+
+      <!-- Card -->
+      <a href="./chicken.html"
+         class="block bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition group">
+        <img src="./restaurent/recipe index 10.png"
+             class="w-full h-64 object-cover group-hover:scale-105 transition duration-300"/>
+        <div class="p-5 text-center font-medium text-lg">
+        one pot mutton biryani
+        </div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+
+<!--footer-->
+<div class="bg-gray-100 flex flex-col justify-center items-center text-center px-6">
+
+  <!-- Logo / Title -->
+  <div class="mb-6">
+    <div class="inline-block border border-gray-400 px-6 py-2 rounded-full relative">
+      <span class="text-red-600 font-medium">My Kitchen</span>
+    </div>
+  </div>
+
+  <!-- Subtitle -->
+  <h2 class="text-2xl md:text-3xl font-medium text-gray-800 mb-6">
+    Healthy recipes for busy people
+  </h2>
+
+  <!-- Social Icons -->
+ <img src="./restaurent/social media links.png" alt="Social Icons" class="mb-8">
+
+  <!-- Email Input -->
+  <div class="w-full max-w-md mb-2">
+    <div class="flex items-center border-b border-gray-400">
+      <input type="email"
+             placeholder="Enter your email address here"
+             class="w-full bg-transparent outline-none py-2 text-gray-700 placeholder-gray-500">
+
+      <button class="text-black text-xl px-2">
+        ➤
+      </button>
+    </div>
+  </div>
+
+  <!-- Note -->
+  <p class="text-sm text-gray-600 mb-12">
+    *Be informed about the latest recipes and workshops
+  </p>
+
+  <!-- Footer -->
+  <div class="w-full flex justify-between text-gray-800 text-lg px-6">
+    <p>Privacy Policy</p>
+    <p>copyrights 2022 © my kitchen</p>
+  </div>
+
+</div>
+
+</body>
+</html>

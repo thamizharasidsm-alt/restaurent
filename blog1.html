@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>My Kitchen</title>
+</head>
+<header class="bg-white shadow-sm">
+
+  <!-- Top Bar -->
+  <div class="bg-gray-200 text-center py-2 text-sm">
+    Subscribe to our newsletter -
+    <span class="font-semibold">mykitchen@gmail.com</span>
+  </div>
+
+  <!-- Main Navbar -->
+  <div class="px-6 py-4">
+
+    <div class="flex items-center justify-between">
+
+      <!-- Logo -->
+      <div class="text-xl font-semibold border px-4 py-2 rounded-full border-gray-300">
+        <span class="text-red-500">My</span> Kitchen
+      </div>
+
+      <!-- Search (Desktop only) -->
+      <div class="hidden md:flex items-center gap-3">
+        <input type="text"
+          placeholder="Search"
+          class="border-b border-gray-400 focus:outline-none px-2 py-1">
+        <button class="bg-red-500 text-white p-2 rounded-full">
+          🔍
+        </button>
+      </div>
+
+      <!-- Hamburger -->
+      <button id="menu-btn" class="md:hidden text-2xl">
+        ☰
+      </button>
+
+    </div>
+
+    <!-- Menu -->
+    <ul id="menu"
+      class="hidden flex-col mt-4 gap-4 font-medium text-gray-700
+             md:flex md:flex-row md:justify-center md:gap-10 md:mt-6">
+
+      <li><a href="./index.html" class="hover:text-red-500">HOME</a></li>
+      <li><a href="./receipes.html" class="hover:text-red-500">RECIPES</a></li>
+      <li><a href="./blog1.html" class="hover:text-red-500">BLOG</a></li>
+      <li><a href="./about us .html" class="hover:text-red-500">ABOUT ME</a></li>
+
+      <!-- Mobile Search -->
+      <div class="flex md:hidden items-center gap-3 mt-4">
+        <input type="text"
+          placeholder="Search"
+          class="border-b border-gray-400 focus:outline-none px-2 py-1 w-full">
+        <button class="bg-red-500 text-white p-2 rounded-full">
+          🔍
+        </button>
+      </div>
+
+    </ul>
+
+  </div>
+
+</header>
+
+<!-- Toggle Script -->
+<script>
+  const btn = document.getElementById('menu-btn');
+  const menu = document.getElementById('menu');
+
+  btn.addEventListener('click', () => {
+    menu.classList.toggle('hidden');
+  });
+</script>
+
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-8 p-6">
+
+  <!-- LEFT SIDE -->
+  <div class="lg:col-span-2 flex justify-center">
+
+    <div class="bg-white rounded-xl shadow-md overflow-hidden max-w-2xl w-full">
+
+      <!-- Image -->
+      <img src="./restaurent/blog header image.png"
+           class="w-full h-64 object-cover">
+
+      <!-- Content -->
+      <div class="p-6">
+        <h2 class="text-2xl font-bold mb-3">
+          The ultimate guide to meal prep
+        </h2>
+
+        <p class="text-gray-600 leading-relaxed">
+          To meal prep effectively, start by planning your meals for the week,
+          then create a grocery list based on those plans. Prep ingredients in
+          advance and choose recipes with overlapping ingredients for efficiency.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- RIGHT SIDE (Sidebar) -->
+  <div class="bg-gray-100 p-6 rounded-xl shadow-md">
+
+    <h2 class="text-xl font-bold mb-4 border-b pb-2">
+      Quick Prefix in this Article:
+    </h2>
+
+    <ol class="space-y-3 text-gray-800">
+      <li>1. What are the foods for breakfast?</li>
+      <li>2. How do you clean vegetables?</li>
+      <li>3. How much ingredients for each recipes?</li>
+      <li>4. What quantities makes a food good?</li>
+      <li>5. Which ingredient is good for every season?</li>
+    </ol>
+
+  </div>
+
+</div>
+</div>
+
+
+
+
+   <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-6">
+
+  <!-- Card 1 -->
+  <div class="bg-white rounded-xl shadow-md overflow-hidden">
+    <img src="./restaurent/blog 1.png" alt="millets" class="w-full h-56 object-cover">
+    <div class="p-5">
+      <p class="text-red-500 text-sm mb-2">08/04/2025</p>
+      <h2 class="text-xl font-semibold mb-2">Easy and healthy millets recipes</h2>
+      <p class="text-gray-600 mb-4">Welcome to my blog, where I share the knowledge acquired...</p>
+      <a href="./blog.html" class="inline-block bg-red-600 text-white px-5 py-2 rounded-lg hover:bg-red-700 transition">Read Now</a>
+    </div>
+  </div>
+
+  <!-- Card 2 -->
+  <div class="bg-white rounded-xl shadow-md overflow-hidden">
+    <img src="./restaurent/blog 2.png" alt="lobster" class="w-full h-56 object-cover">
+    <div class="p-5">
+      <p class="text-red-500 text-sm mb-2">22/03/2025</p>
+      <h2 class="text-xl font-semibold mb-2">How to handle lobster</h2>
+      <p class="text-gray-600 mb-4">Welcome to my blog, where I share the knowledge acquired...</p>
+      <a href="./blog.html" class="inline-block bg-red-600 text-white px-5 py-2 rounded-lg hover:bg-red-700 transition">Read Now</a>
+    </div>
+  </div>
+
+  <!-- Card 3 -->
+  <div class="bg-white rounded-xl shadow-md overflow-hidden">
+    <img src="./restaurent/blog 3.png" alt="platter" class="w-full h-56 object-cover">
+    <div class="p-5">
+      <p class="text-red-500 text-sm mb-2">15/03/2025</p>
+      <h2 class="text-xl font-semibold mb-2">Platter arrangements</h2>
+      <p class="text-gray-600 mb-4">Welcome to my blog, where I share the knowledge acquired...</p>
+      <a href="./blog.html" class="inline-block bg-red-600 text-white px-5 py-2 rounded-lg hover:bg-red-700 transition">Read Now</a>
+    </div>
+  </div>
+
+  <!-- Card 4 -->
+  <div class="bg-white rounded-xl shadow-md overflow-hidden">
+    <img src="./restaurent/blog 4.png" alt="millets" class="w-full h-56 object-cover">
+    <div class="p-5">
+      <p class="text-red-500 text-sm mb-2">10/03/2025</p>
+      <h2 class="text-xl font-semibold mb-2">Healthy breakfast ideas</h2>
+      <p class="text-gray-600 mb-4">Welcome to my blog, where I share healthy breakfast tips...</p>
+      <a href="./blog.html" class="inline-block bg-red-600 text-white px-5 py-2 rounded-lg hover:bg-red-700 transition">Read Now</a>
+    </div>
+  </div>
+
+  <!-- Card 5 -->
+  <div class="bg-white rounded-xl shadow-md overflow-hidden">
+    <img src="./restaurent/blog 5.png" alt="food" class="w-full h-56 object-cover">
+    <div class="p-5">
+      <p class="text-red-500 text-sm mb-2">05/03/2025</p>
+      <h2 class="text-xl font-semibold mb-2">Street food secrets</h2>
+      <p class="text-gray-600 mb-4">Explore the secrets behind famous street foods...</p>
+      <a href="./blog.html" class="inline-block bg-red-600 text-white px-5 py-2 rounded-lg hover:bg-red-700 transition">Read Now</a>
+    </div>
+  </div>
+
+  <!-- Card 6 -->
+  <div class="bg-white rounded-xl shadow-md overflow-hidden">
+    <img src="./restaurent/blog 6.png" alt="chef" class="w-full h-56 object-cover">
+    <div class="p-5">
+      <p class="text-red-500 text-sm mb-2">01/03/2025</p>
+      <h2 class="text-xl font-semibold mb-2">Chef special tips</h2>
+      <p class="text-gray-600 mb-4">Learn pro tips from top chefs around the world...</p>
+      <a href="./blog.html" class="inline-block bg-red-600 text-white px-5 py-2 rounded-lg hover:bg-red-700 transition">Read Now</a>
+    </div>
+  </div>
+
+</div>
+
+<div class="bg-gray-100 flex flex-col justify-center items-center text-center px-2">
+
+  <!-- Logo / Title -->
+  <div class="mb-6">
+    <div class="inline-block border border-gray-400 px-6 py-2 rounded-full relative">
+      <span class="text-red-600 font-medium">My Kitchen</span>
+    </div>
+  </div>
+
+  <!-- Subtitle -->
+  <h2 class="text-2xl md:text-3xl font-medium text-gray-800 mb-6">
+    Healthy recipes for busy people
+  </h2>
+
+  <img src="./restaurent/social media links.png" alt="Social Media Links" class="w-full max-w-md mb-8">
+
+
+  <!-- Email Input -->
+  <div class="w-full max-w-md mb-2">
+    <div class="flex items-center border-b border-gray-400">
+      <input type="email"
+             placeholder="Enter your email address here"
+             class="w-full bg-transparent outline-none py-2 text-gray-700 placeholder-gray-500">
+
+      <button class="text-black text-xl px-2">
+        ➤
+      </button>
+    </div>
+  </div>
+
+  <!-- Note -->
+  <p class="text-sm text-gray-600 mb-12">
+    *Be informed about the latest recipes and workshops
+  </p>
+
+  <!-- Footer -->
+  <div class="w-full flex justify-between text-gray-800 text-lg px-6">
+    <p>Privacy Policy</p>
+    <p>copyrights 2022 © my kitchen</p>
+  </div>
+
+</div>
+
+</body>
+</html>
